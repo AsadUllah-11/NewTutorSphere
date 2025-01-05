@@ -35,12 +35,14 @@ SECRET_KEY = os.environ.get("SECRET_KEY", get_random_secret_key())
 
 # Separate Development variable for db, email backend and S3 bucket
 # DEVELOPMENT = os.environ.get("DEVELOPMENT", "") == "False"
-DEBUG = True
+DEBUG = False
 DEVELOPMENT = True
 ALLOWED_HOSTS = [
     ".herokuapp.com",
     "localhost",
     "127.0.0.1",
+    ".vercel.app",
+    ".now.sh"
 ]
 
 
@@ -180,11 +182,11 @@ else:
     DATABASES = {
         "default": {
              "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": 'TutorSphere',
+        "NAME": 'railway',
         "USER": 'postgres',
-        "PASSWORD": 'admin',
-        "HOST": 'localhost',
-        "PORT": '5432',
+        "PASSWORD": 'nAVDwFeOoVeAlykZcXHqsYPIspuYaRpW',
+        "HOST": 'autorack.proxy.rlwy.net',
+        "PORT": '13540',
         }
     }
 
