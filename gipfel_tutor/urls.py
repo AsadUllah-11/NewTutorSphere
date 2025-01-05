@@ -26,3 +26,5 @@ urlpatterns = [
     path('booking/', include('booking.urls')),
     path('calendly/', include('calendly.urls')),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
